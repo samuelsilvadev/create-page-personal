@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Meu Resumo</title>
+        <title>meu Resumo</title>
         <link href="css/style.css" rel="stylesheet">
         <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -38,5 +38,17 @@
         </div>
     </div>
     <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script type="text/javascript">
+        var repete = "%data%";
+
+        HTMLemail = HTMLemail.replace(repete, "samuelsilvawb@gmail.com");
+        HTMLgithub = HTMLgithub.replace(repete, "https://github.com/samuelsilvadev");
+
+        var footerContacts = document.getElementById("footerContacts");
+        footerContacts.innerHTML += HTMLemail;
+        footerContacts.innerHTML += HTMLgithub;
+
+    </script>
 </body>
 </html>
