@@ -40,35 +40,53 @@
     <script src="js/jQuery.js"></script>
     <script src="js/helper.js"></script>
     <script type="text/javascript">
+        
         var repete = "%data%";
-
-        var header  = document.getElementById("header");
-        HTMLheaderName = HTMLheaderName.replace(repete, "Samuel Silva");
-        HTMLheaderRole = HTMLheaderRole.replace(repete, "Web developer");
-        header.innerHTML += HTMLheaderName;
-        header.innerHTML += HTMLheaderRole;
 
         var skills = ["HTML5", "CSS3", "javascript", "jQuery", "less", "Grunt", "Gulp", "Java", "PHP"];
 
-
         var biografia = {
-            "name":"Samuel Silva",
-            "idade":20,
-            "Habilidades":skills,
-            "contacts":{
+            name:"Samuel Silva",
+            role:"Web Developer",
+            idade:20,
+            habilidades:skills,
+            contacts:{
                 "mobile":"(85)99230-9769",
                 "email":"samuelsilvawb@gmail.com",
                 "github":"samuelsilvadev",
                 "twitter":"@samuelsilvadev",
                 "location":"Fortaleza - CE"
             },
-            "Biografia":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
-            "imagemDoPerfil":"images/fry.jpg"
+            Biografia:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            imagemDoPerfil:"images/fry.jpg"
+        };
+
+        var jobs = {
+            
+            job:"Web Developer",
+            years:2,
+            city:"Fortaleza"
+
+        };
+
+        var education = {
+
+            school:"Faculdade Ateneu",
+            course:"Análise e Desenvolvimento de Sistemas",
+            yearStart:2014,
+            yearEnd:2016
+
         }
 
+        var header  = document.getElementById("header");
+        HTMLheaderName = HTMLheaderName.replace(repete, biografia.name);
+        HTMLheaderRole = HTMLheaderRole.replace(repete, biografia.role);
+        header.innerHTML += HTMLheaderName;
+        header.innerHTML += HTMLheaderRole;
 
-        HTMLemail = HTMLemail.replace(repete, "samuelsilvawb@gmail.com");
-        HTMLgithub = HTMLgithub.replace(repete, "https://github.com/samuelsilvadev");
+
+        HTMLemail = HTMLemail.replace(repete, biografia.contacts.email);
+        HTMLgithub = HTMLgithub.replace(repete, biografia.contacts.github);
 
         var footerContacts = document.getElementById("footerContacts");
         footerContacts.innerHTML += HTMLemail;
