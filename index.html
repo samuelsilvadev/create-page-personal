@@ -42,7 +42,9 @@
     <script type="text/javascript">
         var repete = "%data%";
 
+        var header  = document.getElementById("header");
         HTMLheaderName = HTMLheaderName.replace(repete, "Samuel Silva");
+        header.innerHTML += HTMLheaderName;
 
         HTMLemail = HTMLemail.replace(repete, "samuelsilvawb@gmail.com");
         HTMLgithub = HTMLgithub.replace(repete, "https://github.com/samuelsilvadev");
@@ -50,6 +52,8 @@
         var footerContacts = document.getElementById("footerContacts");
         footerContacts.innerHTML += HTMLemail;
         footerContacts.innerHTML += HTMLgithub;
+
+
 
     </script>
 </body>
