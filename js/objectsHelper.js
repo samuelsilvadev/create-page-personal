@@ -1,0 +1,81 @@
+var work = {
+	work:
+	[
+		{
+			employer:"", 
+			title:"", 
+			location:"", 
+			dates:"",
+			description:""
+		},
+		{
+			employer:"", 
+			title:"", 
+			location:"", 
+			dates:"",
+			description:""
+		},
+		{
+			employer:"", 
+			title:"", 
+			location:"", 
+			dates:"",
+			description:""
+		}
+	]
+};
+
+var projects = {
+	projects:
+	[
+		{
+			title:"", 
+			dates:"",
+			description:"",
+			urlImage:""
+		},
+		{
+			title:"", 
+			dates:"",
+			description:"",
+			urlImage:""
+		}
+	]
+};
+
+var bio = {};
+
+var education = {
+	schools:
+		[
+			{
+				name:"", 
+				location:"", 
+				degreedates:"",
+				site:"",
+				majors:[]
+			},
+			{
+				name:"", 
+				location:"", 
+				degreedates:"",
+				site:"",
+				majors:[]
+			}
+		],
+	onlineCourses:
+		[
+			{
+				title:"", 
+				school:"", 
+				dates:"",
+				url:""
+			},
+			{
+				title:"", 
+				school:"", 
+				dates:"",
+				url:""
+			}
+		]
+};
