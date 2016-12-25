@@ -70,19 +70,47 @@
         };
 
         var education = {
-
-            school:"Faculdade Ateneu",
-            course:"Análise e Desenvolvimento de Sistemas",
-            yearStart:2014,
-            yearEnd:2016
-
+            schools:[
+                {
+                    name:"Faculdade Ateneu",
+                    course:"Análise e Desenvolvimento de Sistemas",
+                    yearStart:2014,
+                    yearEnd:2016   
+                },
+                {
+                    name:"EEEP José Maria Falcão",
+                    course:"Técnico de Informática - Web Developer",
+                    yearStart:2011,
+                    yearEnd:2013  
+                },
+                {
+                    name:"Fundação bradesco",
+                    course:"HTML Básico",
+                    yearStart:2011,
+                    yearEnd:2013  
+                },
+                {
+                    name:"Fundação bradesco",
+                    course:"HTML Avançado",
+                    yearStart:2011,
+                    yearEnd:2013  
+                },
+                {
+                    name:"Fundação bradesco",
+                    course:"Inovando com CSS",
+                    yearStart:2011,
+                    yearEnd:2013  
+                }
+            ]
         }
 
         var header  = document.getElementById("header");
         HTMLheaderName = HTMLheaderName.replace(repete, biografia.name);
         HTMLheaderRole = HTMLheaderRole.replace(repete, biografia.role);
+        HTMLbioPic = HTMLbioPic.replace(repete,biografia.imagemDoPerfil);
         header.innerHTML += HTMLheaderName;
         header.innerHTML += HTMLheaderRole;
+        header.innerHTML += HTMLbioPic;
 
 
         HTMLemail = HTMLemail.replace(repete, biografia.contacts.email);
@@ -91,6 +119,9 @@
         var footerContacts = document.getElementById("footerContacts");
         footerContacts.innerHTML += HTMLemail;
         footerContacts.innerHTML += HTMLgithub;
+
+        
+
 
 
 
