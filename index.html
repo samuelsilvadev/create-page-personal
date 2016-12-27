@@ -120,9 +120,21 @@
         footerContacts.innerHTML += HTMLemail;
         footerContacts.innerHTML += HTMLgithub;
 
+        if(document.getElementsByClassName('work-entry').length === 0) {
+                
+            document.getElementById("workExperience").style.backgroundColor = "black";
+
+            setTimeout(function(){ 
+                document.getElementById('workExperience').style.display = 'none';
+            }, 3000);            
+
+        }
+
+        if(document.getElementsByClassName('project-entry').length === 0) {
+            document.getElementById('projects').style.display = 'none';
+        }
+
         
-
-
 
 
     </script>
