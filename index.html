@@ -39,6 +39,7 @@
     </div>
     <script src="js/jQuery.js"></script>
     <script src="js/helper.js"></script>
+    <script src="js/objectsHelper.js"></script>
     <script type="text/javascript">
         
         var repete = "%data%";
@@ -120,20 +121,32 @@
         footerContacts.innerHTML += HTMLemail;
         footerContacts.innerHTML += HTMLgithub;
 
-        if(document.getElementsByClassName('work-entry').length === 0) {
-                
-            document.getElementById("workExperience").style.backgroundColor = "black";
-
-            setTimeout(function(){ 
-                document.getElementById('workExperience').style.display = 'none';
-            }, 3000);            
-
-        }
+        
+        var workExperience = document.getElementById("workExperience");
+        
+        //HTMLworkEmployer
+        //HTMLworkTitle
+        if(work.work.length === 0) {
+            document.getElementById('workExperience').style.display = 'none';
+        }else{
+            for(key in work.work){
+                /*var divWork  = HTMLworkStart;*/
+                var employer = HTMLworkEmployer;
+                var titleJob = HTMLworkTitle;
+                var locationWork = HTMLworkLocation;
+                employer = employer.replace(repete, work.work[key].employer);
+                titleJob = titleJob.replace(repete, work.work[key].title);
+                locationWork = locationWork.replace(repete, work.work[key].location);
+                workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + "<div>";                
+            };    
+            console.log(workExperience);
+        };
 
         if(document.getElementsByClassName('project-entry').length === 0) {
             document.getElementById('projects').style.display = 'none';
-        }      
+        };     
 
+        
 
     </script>
 </body>

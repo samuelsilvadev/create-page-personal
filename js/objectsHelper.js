@@ -2,24 +2,24 @@ var work = {
 	work:
 	[
 		{
-			employer:"", 
-			title:"", 
-			location:"", 
-			dates:"",
+			employer:"Sotech Saúde e Tecnologia", 
+			title:"Full stack Developer", 
+			location:"Eusébio - CE", 
+			dates:"2015 - 2016",
 			description:""
 		},
 		{
-			employer:"", 
-			title:"", 
-			location:"", 
-			dates:"",
+			employer:"S&S", 
+			title:"Frontend Developer", 
+			location:"Pacajus - CE", 
+			dates:"2014- 2014",
 			description:""
 		},
 		{
-			employer:"", 
-			title:"", 
-			location:"", 
-			dates:"",
+			employer:"Armtec", 
+			title:"Web Developer", 
+			location:"Fortaleza - CE", 
+			dates:"2013 - 2016",
 			description:""
 		}
 	]
