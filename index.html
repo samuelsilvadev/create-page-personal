@@ -44,13 +44,11 @@
         
         var repete = "%data%";
 
-        var skills = ["HTML5", "CSS3", "javascript", "jQuery", "less", "Grunt", "Gulp", "Java", "PHP"];
-
         var biografia = {
             name:"Samuel Silva",
             role:"Web Developer",
             idade:20,
-            habilidades:skills,
+            habilidades:["HTML5", "CSS3", "javascript", "jQuery", "less", "Grunt", "Gulp", "Java", "PHP"],
             contacts:{
                 "mobile":"(85)99230-9769",
                 "email":"samuelsilvawb@gmail.com",
@@ -86,6 +84,12 @@
         topContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
         header.appendChild(topContacts);
         header.innerHTML += HTMLbioPic;
+        header.innerHTML += HTMLskillsStart;
+        
+        for(let key in biografia.habilidades){
+            document.getElementById("skills").innerHTML += HTMLskills.replace(repete,biografia.habilidades[key]);
+        }
+        
         
         footerContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
         
@@ -106,7 +110,7 @@
         } 
 
         function seeWork(){
-            for(key in work.work){
+            for(let key in work.work){
                 /*var divWork  = HTMLworkStart;*/
                 var employer = HTMLworkEmployer;
                 var titleJob = HTMLworkTitle;
@@ -121,7 +125,7 @@
         };
         
         function seeProjects(){
-            for(key in projects.projects){
+            for(let key in projects.projects){
                 /*var divWork  = HTMLworkStart;*/
                 var projectTitle = HTMLprojectTitle;
                 var projectDates = HTMLprojectDates;
