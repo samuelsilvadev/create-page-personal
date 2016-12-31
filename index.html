@@ -69,11 +69,10 @@
         header.innerHTML += HTMLbioPic;
         header.innerHTML += HTMLskillsStart;
         
-        for(let key in biografia.habilidades){
-            document.getElementById("skills").innerHTML += HTMLskills.replace(repete,biografia.habilidades[key]);
-        }
-        
-        
+        biografia.habilidades.forEach(function(key){
+            document.getElementById("skills").innerHTML += HTMLskills.replace(repete,key);
+        });
+                
         footerContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
         
         var workExperience = document.getElementById("workExperience");
@@ -105,7 +104,7 @@
                 description = description.replace(repete, work.work[key].description);
                 workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + description + "<div>";                
             };
-        };
+        }
         
         function seeProjects(){
             for(let key in projects.projects){
