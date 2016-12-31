@@ -127,9 +127,8 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #592869;
 }
 
 .flex-box {
@@ -172,7 +171,8 @@ span {
 }
 
 #lets-connect {
-  text-align: center;
+    text-align: center;
+    background-color: #592869;
 }
 
 /* Media queries to handle various device widths */
