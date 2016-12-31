@@ -45,17 +45,18 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
+window.onload = function(){
+  document.getElementsByTagName('button')[0].addEventListener('click',function(){
+    var name = document.querySelector('#name');
+    var iName = inName(name.textContent) || function(){};
+    name.innerHTML = iName;
+  }); 
+}
 
-/*
-The Internationalize Names challenge found in the lesson Flow Control from JavaScript Basics requires you to create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
-*/
-$(document).ready(function() {
-  $('button').click(function() {
-    var $name = $('#name');
-    var iName = inName($name.text()) || function(){};
-    $name.html(iName);
-  });
-});
+function inName(name){
+    var newName = name.trim().split(" ");
+    return newName[0] +" "+ newName[1].toUpperCase();
+}
 
 //coletar cliques do usuário
 var clickLocations = [];
@@ -73,9 +74,6 @@ function logClicks(x,y) {
 document.addEventListener("click", function(e){
   logClicks(e.clientX, e.clientY); 
 });
-
-
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
