@@ -61,71 +61,35 @@
             Biografia:"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
             imagemDoPerfil:"images/fry.jpg"
         };
-
-        var jobs = {
-            
-            job:"Web Developer",
-            years:2,
-            city:"Fortaleza"
-
-        };
-
-        var education = {
-            schools:[
-                {
-                    name:"Faculdade Ateneu",
-                    course:"Análise e Desenvolvimento de Sistemas",
-                    yearStart:2014,
-                    yearEnd:2016   
-                },
-                {
-                    name:"EEEP José Maria Falcão",
-                    course:"Técnico de Informática - Web Developer",
-                    yearStart:2011,
-                    yearEnd:2013  
-                },
-                {
-                    name:"Fundação bradesco",
-                    course:"HTML Básico",
-                    yearStart:2011,
-                    yearEnd:2013  
-                },
-                {
-                    name:"Fundação bradesco",
-                    course:"HTML Avançado",
-                    yearStart:2011,
-                    yearEnd:2013  
-                },
-                {
-                    name:"Fundação bradesco",
-                    course:"Inovando com CSS",
-                    yearStart:2011,
-                    yearEnd:2013  
-                }
-            ]
-        }
-
-        var header  = document.getElementById("header");
+       
+        var header          = document.getElementById("header");
+        var topContacts     = document.getElementById("topContacts");
+        var footerContacts  = document.getElementById("footerContacts");
+        
+        //removendo para adicionar depois
+        header.removeChild(topContacts);
+        
         HTMLheaderName = HTMLheaderName.replace(repete, biografia.name);
         HTMLheaderRole = HTMLheaderRole.replace(repete, biografia.role);
         HTMLbioPic = HTMLbioPic.replace(repete,biografia.imagemDoPerfil);
+        
         header.innerHTML += HTMLheaderName;
         header.innerHTML += HTMLheaderRole;
+                        
+        HTMLmobile      = HTMLmobile.replace(repete, biografia.contacts.mobile);
+        HTMLemail       = HTMLemail.replace(repete, biografia.contacts.email);
+        HTMLgithub      = HTMLgithub.replace(repete, biografia.contacts.github);
+        HTMLtwitter     = HTMLtwitter.replace(repete, biografia.contacts.twitter);
+        HTMLlocation    = HTMLlocation.replace(repete, biografia.contacts.location);
+        
+        topContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
+        header.appendChild(topContacts);
         header.innerHTML += HTMLbioPic;
-
-
-        HTMLemail = HTMLemail.replace(repete, biografia.contacts.email);
-        HTMLgithub = HTMLgithub.replace(repete, biografia.contacts.github);
-
-        var footerContacts = document.getElementById("footerContacts");
-        footerContacts.innerHTML += HTMLemail;
-        footerContacts.innerHTML += HTMLgithub;
-
+        
+        footerContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
         
         var workExperience = document.getElementById("workExperience");
         
-        //HTMLworkEmployer
-        //HTMLworkTitle
         if(work.work.length === 0) {
             document.getElementById('workExperience').style.display = 'none';
         }else{
