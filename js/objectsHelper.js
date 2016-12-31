@@ -29,18 +29,36 @@ var projects = {
 	projects:
 	[
 		{
-			title:"", 
-			dates:"",
-			description:"",
+			title:"Vaccinação", 
+			dates:"2016",
+			description:"Projeto criado para retirar cartão de vacina manual, tornando-o digital",
+			urlImage:""
+		},
+        {
+			title:"Task", 
+			dates:"2016",
+			description:"Projeto realizado para facilitar o acompanhamento de tarefas em qualquer ambiente",
+			urlImage:""
+		},
+        {
+			title:"SOS", 
+			dates:"2015",
+			description:"Projeto desenvolvido para facilitar o envio de chamados para qualquer setor de uma empresa",
 			urlImage:""
 		},
 		{
-			title:"", 
-			dates:"",
-			description:"",
+			title:"Altair Diário Virtual",
+			dates:"2014",
+			description:"Projeto para retirar utilização do diário de classe manual",
 			urlImage:""
 		}
-	]
+	],
+    display:function(){
+        if(projects.projects.length > 0){
+            return true;
+        }
+        return false;
+    }
 };
 
 var bio = {};           
