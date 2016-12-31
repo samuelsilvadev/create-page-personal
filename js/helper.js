@@ -76,17 +76,8 @@ document.addEventListener("click", function(e){
   logClicks(e.clientX, e.clientY); 
 });
 
-/*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference
-*/
-var map;    // declares a global map variable
+var map; 
 
-
-/*
-Start here! initializeMap() is called when page is loaded.
-*/
 function initializeMap() {
 
   var locations;
@@ -95,12 +86,7 @@ function initializeMap() {
     disableDefaultUI: true
   };
 
-  /*
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js.
-  */
-  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
+  map = new google.maps.Map(document.querySelector('#mapDiv'), mapOptions);
 
   /*
   locationFinder() returns an array of every location string from the JSONs
@@ -219,16 +205,12 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
 
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+    map.fitBounds(mapBounds);
+});
