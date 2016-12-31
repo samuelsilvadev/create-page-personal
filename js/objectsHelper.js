@@ -6,21 +6,21 @@ var work = {
 			title:"Full stack Developer", 
 			location:"Eusébio - CE", 
 			dates:"2015 - 2016",
-			description:""
+			description:"Desenvolvimento de ERP na área da saúde utilizando JAVA no Backend. JSF como framework component based."
 		},
 		{
 			employer:"S&S", 
 			title:"Frontend Developer", 
 			location:"Pacajus - CE", 
 			dates:"2014- 2014",
-			description:""
+			description:"Desenvolvimento de aplicações internas, utilizando PHP e as bases do frontend. Experiência com Bootstrap."
 		},
 		{
 			employer:"Armtec", 
 			title:"Web Developer", 
 			location:"Fortaleza - CE", 
 			dates:"2013 - 2016",
-			description:""
+			description:"Desenvolvimento de aplicações web utilizando PHP no backend e os pilares do frontend(HTML5, CSS3 e javascript + JQuery)"
 		}
 	]
 };
@@ -43,39 +43,45 @@ var projects = {
 	]
 };
 
-var bio = {};
+var bio = {};           
 
 var education = {
 	schools:
 		[
 			{
-				name:"", 
-				location:"", 
-				degreedates:"",
-				site:"",
+				name:"Faculdade Ateneu", 
+				location:"Fortaleza - CE", 
+				degreedates:"2014 - 2016",
+				site:"http://fate.edu.br/",
 				majors:[]
 			},
 			{
-				name:"", 
-				location:"", 
-				degreedates:"",
-				site:"",
+				name:"EEEP José Maria Falcão", 
+				location:"Pacajus - CE", 
+				degreedates:"2011 - 2013",
+				site:"http://escolaprofissionalpacajus.blogspot.com.br/",
 				majors:[]
 			}
 		],
 	onlineCourses:
 		[
 			{
-				title:"", 
-				school:"", 
-				dates:"",
-				url:""
+				title:"HTML Básico", 
+				school:"Fundação bradesco", 
+				dates:"2011",
+				url:"http://www.ev.org.br/Paginas/Home.aspx"
 			},
 			{
-				title:"", 
-				school:"", 
-				dates:"",
-				url:""
+				title:"HTML Avançado", 
+				school:"Fundação bradesco", 
+				dates:"2011",
+				url:"http://www.ev.org.br/Paginas/Home.aspx"
+			},
+			{
+				title:"Inovando com CSS", 
+				school:"Fundação bradesco", 
+				dates:"2011",
+				url:"http://www.ev.org.br/Paginas/Home.aspx"
 			}
 		]
 };

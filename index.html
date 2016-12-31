@@ -129,24 +129,27 @@
         if(work.work.length === 0) {
             document.getElementById('workExperience').style.display = 'none';
         }else{
-            for(key in work.work){
-                /*var divWork  = HTMLworkStart;*/
-                var employer = HTMLworkEmployer;
-                var titleJob = HTMLworkTitle;
-                var locationWork = HTMLworkLocation;
-                employer = employer.replace(repete, work.work[key].employer);
-                titleJob = titleJob.replace(repete, work.work[key].title);
-                locationWork = locationWork.replace(repete, work.work[key].location);
-                workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + "<div>";                
-            };    
-            console.log(workExperience);
+            seeWork();                    
         };
 
         if(document.getElementsByClassName('project-entry').length === 0) {
             document.getElementById('projects').style.display = 'none';
         };     
 
-        
+        function seeWork(){
+            for(key in work.work){
+                /*var divWork  = HTMLworkStart;*/
+                var employer = HTMLworkEmployer;
+                var titleJob = HTMLworkTitle;
+                var locationWork = HTMLworkLocation;
+                var description = HTMLworkDescription;
+                employer = employer.replace(repete, work.work[key].employer);
+                titleJob = titleJob.replace(repete, work.work[key].title);
+                locationWork = locationWork.replace(repete, work.work[key].location);
+                description = description.replace(repete, work.work[key].description);
+                workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + description + "<div>";                
+            };
+        }
 
     </script>
 </body>
