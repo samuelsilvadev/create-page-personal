@@ -1,0 +1,22 @@
+{
+  "name": "create-page-personal",
+  "version": "1.0.0",
+  "description": "O usuário colocar suas informações e gerar uma página que servirá de curriculum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelsilvadev/create-page-personal.git"
+  },
+  "author": "samuel silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelsilvadev/create-page-personal/issues"
+  },
+  "homepage": "https://github.com/samuelsilvadev/create-page-personal#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
