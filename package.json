@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/samuelsilvadev/create-page-personal#readme",
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0"
   }
 }
