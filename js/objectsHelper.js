@@ -54,9 +54,9 @@ var projects = {
 		}
 	],
     display:function(){
-        if(projects.projects.length > 0){
+        if(this.projects.length > 0){
             return true;
-        }
+        }       
         return false;
     }
 };

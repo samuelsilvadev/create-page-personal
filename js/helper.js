@@ -46,11 +46,12 @@ var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 window.onload = function(){
-  document.getElementsByTagName('button')[0].addEventListener('click',function(){
+  //botão para alterar internacionalização do nome
+  /*document.getElementsByTagName('button')[0].addEventListener('click',function(){
     var name = document.querySelector('#name');
     var iName = inName(name.textContent) || function(){};
     name.innerHTML = iName;
-  }); 
+  });*/ 
 }
 
 function inName(name){

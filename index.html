@@ -75,7 +75,7 @@
         
         header.innerHTML += HTMLheaderName;
         header.innerHTML += HTMLheaderRole;
-        header.innerHTML += internationalizeButton;
+        //header.innerHTML += internationalizeButton;
                         
         HTMLmobile      = HTMLmobile.replace(repete, biografia.contacts.mobile);
         HTMLemail       = HTMLemail.replace(repete, biografia.contacts.email);
@@ -96,10 +96,14 @@
         }else{
             seeWork();                    
         };
-
-        if(document.getElementsByClassName('project-entry').length === 0) {
+        
+        var projectsPerformed = document.getElementById("projects");
+        
+        if(!projects.display){
             document.getElementById('projects').style.display = 'none';
-        };     
+        }else{
+            seeProjects();
+        } 
 
         function seeWork(){
             for(key in work.work){
@@ -113,6 +117,21 @@
                 locationWork = locationWork.replace(repete, work.work[key].location);
                 description = description.replace(repete, work.work[key].description);
                 workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + description + "<div>";                
+            };
+        };
+        
+        function seeProjects(){
+            for(key in projects.projects){
+                /*var divWork  = HTMLworkStart;*/
+                var projectTitle = HTMLprojectTitle;
+                var projectDates = HTMLprojectDates;
+                var projectDescription = HTMLprojectDescription;
+                //var projectImage = HTMLprojectImage;
+                projectTitle = projectTitle.replace(repete, projects.projects[key].title);
+                projectDates = projectDates.replace(repete, projects.projects[key].dates);
+                projectDescription = projectDescription.replace(repete, projects.projects[key].description);
+                
+                projectsPerformed.innerHTML += "<div class='project-entry'>" + projectTitle + projectDates + projectDescription + "<div>";                
             };
         }
 
