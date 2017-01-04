@@ -126,7 +126,13 @@
 
         function seeEducation(){
             education.schools.forEach(function(n){
-                console.log(n.name);
+                let schoolName = HTMLschoolName;
+                let schoolDegree = HTMLschoolDegree;
+                let schoolDates = HTMLschoolDates;
+                let schoolLocation = HTMLschoolLocation;
+                let schoolMajor = HTMLschoolMajor;
+                schoolName = schoolName.replace(repete, n.name);
+                console.log(schoolName);                
                 console.log(n.location);
                 console.log(n.degreedates);
                 console.log(n.site);
