@@ -97,10 +97,10 @@
         function seeWork(){
             work.work.forEach(function(work){
                 /*var divWork  = HTMLworkStart;*/
-                var employer = HTMLworkEmployer;
-                var titleJob = HTMLworkTitle;
-                var locationWork = HTMLworkLocation;
-                var description = HTMLworkDescription;
+                let employer = HTMLworkEmployer;
+                let titleJob = HTMLworkTitle;
+                let locationWork = HTMLworkLocation;
+                let description = HTMLworkDescription;
                 employer = employer.replace(repete, work.employer);
                 titleJob = titleJob.replace(repete, work.title);
                 locationWork = locationWork.replace(repete, work.location);
@@ -112,9 +112,9 @@
         function seeProjects(){
             projects.projects.forEach(function(projects){
                 /*var divWork  = HTMLworkStart;*/
-                var projectTitle = HTMLprojectTitle;
-                var projectDates = HTMLprojectDates;
-                var projectDescription = HTMLprojectDescription;
+                let projectTitle = HTMLprojectTitle;
+                let projectDates = HTMLprojectDates;
+                let projectDescription = HTMLprojectDescription;
                 //var projectImage = HTMLprojectImage;
                 projectTitle = projectTitle.replace(repete, projects.title);
                 projectDates = projectDates.replace(repete, projects.dates);
