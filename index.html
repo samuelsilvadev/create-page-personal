@@ -95,33 +95,33 @@
         } 
 
         function seeWork(){
-            for(let key in work.work){
+            work.work.forEach(function(work){
                 /*var divWork  = HTMLworkStart;*/
                 var employer = HTMLworkEmployer;
                 var titleJob = HTMLworkTitle;
                 var locationWork = HTMLworkLocation;
                 var description = HTMLworkDescription;
-                employer = employer.replace(repete, work.work[key].employer);
-                titleJob = titleJob.replace(repete, work.work[key].title);
-                locationWork = locationWork.replace(repete, work.work[key].location);
-                description = description.replace(repete, work.work[key].description);
-                workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + description + "<div>";                
-            };
+                employer = employer.replace(repete, work.employer);
+                titleJob = titleJob.replace(repete, work.title);
+                locationWork = locationWork.replace(repete, work.location);
+                description = description.replace(repete, work.description);
+                workExperience.innerHTML += "<div class='work-entry'>" + employer + titleJob + locationWork + description + "<div>";
+            });
         }
         
         function seeProjects(){
-            for(let key in projects.projects){
+            projects.projects.forEach(function(projects){
                 /*var divWork  = HTMLworkStart;*/
                 var projectTitle = HTMLprojectTitle;
                 var projectDates = HTMLprojectDates;
                 var projectDescription = HTMLprojectDescription;
                 //var projectImage = HTMLprojectImage;
-                projectTitle = projectTitle.replace(repete, projects.projects[key].title);
-                projectDates = projectDates.replace(repete, projects.projects[key].dates);
-                projectDescription = projectDescription.replace(repete, projects.projects[key].description);
+                projectTitle = projectTitle.replace(repete, projects.title);
+                projectDates = projectDates.replace(repete, projects.dates);
+                projectDescription = projectDescription.replace(repete, projects.description);
                 
-                projectsPerformed.innerHTML += "<div class='project-entry'>" + projectTitle + projectDates + projectDescription + "<div>";                
-            };
+                projectsPerformed.innerHTML += "<div class='project-entry'>" + projectTitle + projectDates + projectDescription + "<div>";
+            });            
         }
 
         var educationMe = document.getElementById("education");
