@@ -124,7 +124,8 @@
             };
         }
 
-        function seeEducationSchools(){
+        var educationMe = document.getElementById("education");
+        function seeEducationSchools(){        
             education.schools.forEach(function(n){
                 let schoolName = HTMLschoolName;
                 let schoolDegree = HTMLschoolDegree;
@@ -132,10 +133,10 @@
                 let schoolLocation = HTMLschoolLocation;
                 let schoolMajor = HTMLschoolMajor;
                 schoolName = schoolName.replace(repete, n.name);
-                console.log(schoolName);                
-                console.log(n.location);
-                console.log(n.degreedates);
-                console.log(n.site);
+                schoolDegree = schoolDegree.replace(repete, "Ensino Superior")
+                schoolDates = schoolDates.replace(repete, n.degreedates);
+                schoolLocation =schoolLocation.replace(repete, n.location);
+                educationMe.innerHTML += '<div class="education-entry">'+schoolName + schoolDegree + schoolDates + schoolLocation+'</div><br>'
             });         
         }
         
