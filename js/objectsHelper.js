@@ -85,6 +85,7 @@ var education = {
 				location:"Fortaleza - CE", 
 				degreedates:"2014 - 2016",
 				site:"http://fate.edu.br/",
+				degree:"Ensino Superior",
 				majors:[]
 			},
 			{
@@ -92,6 +93,7 @@ var education = {
 				location:"Pacajus - CE", 
 				degreedates:"2011 - 2013",
 				site:"http://escolaprofissionalpacajus.blogspot.com.br/",
+				degree:"Ensino Profissional",
 				majors:[]
 			}
 		],

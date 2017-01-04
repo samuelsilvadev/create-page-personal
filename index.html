@@ -133,7 +133,7 @@
                 let schoolLocation = HTMLschoolLocation;
                 let schoolMajor = HTMLschoolMajor;
                 schoolName = schoolName.replace(repete, n.name);
-                schoolDegree = schoolDegree.replace(repete, "Ensino Superior")
+                schoolDegree = schoolDegree.replace(repete, n.degree);
                 schoolDates = schoolDates.replace(repete, n.degreedates);
                 schoolLocation =schoolLocation.replace(repete, n.location);
                 educationMe.innerHTML += '<div class="education-entry">'+schoolName + schoolDegree + schoolDates + schoolLocation+'</div><br>'
