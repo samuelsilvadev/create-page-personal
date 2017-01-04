@@ -124,7 +124,7 @@
             };
         }
 
-        function seeEducation(){
+        function seeEducationSchools(){
             education.schools.forEach(function(n){
                 let schoolName = HTMLschoolName;
                 let schoolDegree = HTMLschoolDegree;
@@ -136,8 +136,10 @@
                 console.log(n.location);
                 console.log(n.degreedates);
                 console.log(n.site);
-            });
-
+            });         
+        }
+        
+        function seeEducationOnlineCourses(){
             education.onlineCourses.forEach(function(n){
                 console.log(n.title);
                 console.log(n.school);
@@ -145,7 +147,9 @@
                 console.log(n.url); 
             });
         }
-        seeEducation();
+
+        seeEducationSchools();
+        seeEducationOnlineCourses();
 
     </script>
     <!-- endbuild -->
