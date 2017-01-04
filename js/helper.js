@@ -106,11 +106,10 @@ function initializeMap() {
 
     function createMapMarker(placeData) {
 
-    
-    var lat = placeData.geometry.location.lat();  // latitude from the place service
-    var lon = placeData.geometry.location.lng();  // longitude from the place service
-    var name = placeData.formatted_address;   // name of the place from the place service
-    var bounds = window.mapBounds;            // current boundaries of the map window
+        var lat = placeData.geometry.location.lat();
+        var lon = placeData.geometry.location.lng();
+        var name = placeData.formatted_address;
+        var bounds = window.mapBounds;
 
     
     var marker = new google.maps.Marker({
@@ -122,7 +121,6 @@ function initializeMap() {
     var infoWindow = new google.maps.InfoWindow({
       content: name
     });
-
 
     google.maps.event.addListener(marker, 'click', function() {
 
