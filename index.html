@@ -141,11 +141,13 @@
         }
         
         function seeEducationOnlineCourses(){
+            educationMe.innerHTML += HTMLonlineClasses;
             education.onlineCourses.forEach(function(n){
-                console.log(n.title);
-                console.log(n.school);
-                console.log(n.dates);
-                console.log(n.url); 
+                let onlineTitle =  HTMLonlineTitle.replace(repete, n.title);
+                let onlineSchool = HTMLonlineSchool.replace(repete, n.school);
+                let onlineDates =  HTMLonlineDates.replace(repete, n.dates);
+                let onlineURL = HTMLonlineURL.replace(repete, n.url);
+                educationMe.innerHTML += '<div class="education-entry">'+ onlineTitle + onlineSchool + onlineDates + onlineURL + '</div><br>';
             });
         }
 
