@@ -18,12 +18,26 @@ module.exports = function(grunt){
         },
         usemin:{
             html:"dist/*.html"
+        },
+        babel: {
+            compile: {
+                options: {
+                    sourceMap: true,
+                    presets: ['es2015']
+                },
+                files: {
+                    'dist/js/helper.js': 'dist/js/helper.js',
+                    'dist/js/objectsHelper.js': 'dist/js/objectsHelper.js',
+                    'dist/js/app.js': 'dist/js/app.js',
+                }
+            }
         }
     });
     
     grunt.registerTask("dist",["clean","copy"]);
+    grunt.registerTask("compilaJs",["babel"]);
     grunt.registerTask("minifica",["useminPrepare","concat","uglify","cssmin","usemin"]);
-    grunt.registerTask("default",["dist","minifica"]);
+    grunt.registerTask("default",["dist","compilaJs","minifica"]);
     
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-clean");
@@ -31,5 +45,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-usemin");
+    grunt.loadNpmTasks("grunt-babel");
+    grunt.loadNpmTasks("babel-preset-es2015");
 } 
  
