@@ -131,6 +131,11 @@ a {
   background-color: #592869;
 }
 
+#btn-main{
+  display: block;
+  margin: 0 auto;  
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
