@@ -131,7 +131,7 @@ a {
   background-color: #592869;
 }
 
-#btn-main{
+#btn-main, #btn-main-2{
   display: block;
   margin: 0 auto;  
 }

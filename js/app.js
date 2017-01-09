@@ -113,4 +113,10 @@ function seePagePersonal(){
     document.getElementById("main-page-personal").style.display = "block";    
 }
 
+function seeMainPage(){
+    document.getElementById("main-page-personal").style.display = "none";
+    document.getElementById("main").style.display = "block";    
+}
+
 document.getElementById("btn-main").addEventListener("click",seePagePersonal);
+document.getElementById("btn-main-2").addEventListener("click",seeMainPage);
