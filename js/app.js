@@ -107,3 +107,10 @@ function seeEducationOnlineCourses(){
 
 seeEducationSchools();
 seeEducationOnlineCourses();
+
+function seePagePersonal(){
+    document.getElementById("main").style.display = "none";
+    document.getElementById("main-page-personal").style.display = "block";    
+}
+
+document.getElementById("btn-main").addEventListener("click",seePagePersonal);
