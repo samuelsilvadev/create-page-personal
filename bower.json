@@ -1,0 +1,20 @@
+{
+  "name": "create-page-personal",
+  "description": "O usuário colocar suas informações e gerar uma página que servirá de curriculum",
+  "main": "index.js",
+  "authors": [
+    "samuel silva"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/samuelsilvadev/create-page-personal",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
