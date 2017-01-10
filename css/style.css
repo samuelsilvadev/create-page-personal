@@ -137,12 +137,11 @@ a {
 
 #btn-main, #btn-main-2  {
   display: block;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 #main-page-personal{
-  display: none;
-  background-color:#03A9F4 ;
+  display: none;  
 }
 
 .flex-box {

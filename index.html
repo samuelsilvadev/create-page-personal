@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <title>Meu Resumo</title>
         <!-- build:css css/index.min.css -->
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <!-- endbuild -->
+        <link rel="stylesheet" type="text/css" href="componentes/bootstrap/dist/css/bootstrap.min.css">
         <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDgob1XxUquWwKOX8rDX0PUlPY_8rWz5Ik"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
@@ -42,21 +43,39 @@
     </div>
     <div id="main-page-personal">
         <button id="btn-main-2">Voltar</button>
+        
         <form id="frm-contacts">
-            <label>Celular</label>
-            <input type="text"><br>
-
-            <label>Email</label>
-            <input type="email"><br>
-
-            <label>Github</label>
-            <input type="text"><br>
-
-            <label>Twitter</label>
-            <input type="text"><br>
-
-            <label>Eu moro em</label>
-            <input type="text"><br>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label>Celular</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label>Email</label>
+                    <input type="email" class="form-control">
+                </div>
+            </div>                
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label>Github</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label>Twitter</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>                
+            <div class="form-group">
+                <div class="col-md-12">
+                    <label>Eu moro em</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div><br>
+            <div class="form-group">
+                <div class="col-md-1">                 
+                    <button type="button" class="btn btn-default">Salvar</button>
+                </div>
+            </div>
         </form>
     </div>   
     <!-- build:js js/index.min.js -->
