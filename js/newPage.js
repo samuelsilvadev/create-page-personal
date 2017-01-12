@@ -4,6 +4,7 @@
 
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
+	getFormPerson();
 	getFormContact();
 });
 
@@ -24,13 +25,25 @@ var biografia = {
 };
 
 function getFormPerson(){
-
+	console.log(document.getElementById("frm-initial").elements[0]);
+	for (let i = 0; i <= document.getElementById("frm-initial").elements.length; i++) {
+		
+		let name = document.getElementById("frm-initial").elements[i].name;
+		let value = document.getElementById("frm-initial").elements[i].value;
+		
+		if(name === "name"){
+			biografia.name = value;
+		}else if(name === "office"){
+			biografia.role = value;
+		}
+	 }
+	 console.log(biografia);
 }
 
 function getFormContact(){
-	for (var i = document.getElementById("frm-contacts").elements.length - 1; i >= 0; i--) {
-		let name = document.getElementById("frm-contacts").elements[i].name;
-		let value = document.getElementById("frm-contacts").elements[i].value;
+	for (let i = 0; i <= document.getElementById("frm-contacts").elements.length; i++) {
+		let name = document.getElementById("frm-contacts").elements[i+1].name;
+		let value = document.getElementById("frm-contacts").elements[i+1].value;
 		
 		if(name === "mobile"){
 			biografia.contacts.mobile = value;
