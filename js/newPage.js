@@ -23,9 +23,26 @@ var biografia = {
     imagemDoPerfil:"images/fry.jpg"
 };
 
+function getFormPerson(){
+
+}
+
 function getFormContact(){
-	for (var i = document.forms[0].elements.length - 1; i >= 0; i--) {
-	 	console.log(document.getElementById("frm-contacts").elements[i].name);
-	 	console.log(document.getElementById("frm-contacts").elements[i].value);
-	 } 
+	for (var i = document.getElementById("frm-contacts").elements.length - 1; i >= 0; i--) {
+		let name = document.getElementById("frm-contacts").elements[i].name;
+		let value = document.getElementById("frm-contacts").elements[i].value;
+		
+		if(name === "mobile"){
+			biografia.contacts.mobile = value;
+		}else if(name === "email"){
+			biografia.contacts.email = value;
+		}else if(name === "github"){
+			biografia.contacts.github = value;
+		}else if(name === "twitter"){
+			biografia.contacts.twitter = value;
+		}else if(name === "location"){
+			biografia.contacts.location = value;
+		}
+	 }
+	 console.log(biografia.contacts);
 }
