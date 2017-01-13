@@ -6,6 +6,7 @@ document.getElementById("btn-frm-contact-2").addEventListener("click",function(e
 	e.preventDefault();
 	getFormPerson();
 	getFormContact();
+	console.log(createObjectExperience("employer", "title", "location", "dates", "description"));
 });
 
 var biografiaNewUSer = {
@@ -58,13 +59,23 @@ function getFormContact(){
 	 }	 
 }
 
+function createObjectExperience(employer, title, location, dates, description){
+	return{
+		employer:employer,
+		title:title,
+		location:location,
+		dates:dates,
+		description:description
+	}
+}
 
 function getFormExperience(){
 	let form = document.getElementById("frm-experience");
-	for (let i = 0; i < form.elements.length; i++) {
+	let experience = [];
+	for (let i = 0; i < form.elements.length; i++){
 		let name = form.elements[i].name;
-		let value = form.elements[i].value;		
-	 }
+		let value = form.elements[i].value;
+	}
 }
 
 function addExperience(){
