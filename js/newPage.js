@@ -57,3 +57,16 @@ function getFormContact(){
 		}
 	 }	 
 }
+
+
+function getFormExperience(){
+	let form = document.getElementById("frm-experience");
+	for (let i = 0; i < form.elements.length; i++) {
+		let name = form.elements[i].name;
+		let value = form.elements[i].value;		
+	 }
+}
+
+function addExperience(){
+
+}
