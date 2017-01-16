@@ -105,10 +105,12 @@ function getFormExperience(){
 			break;
 		}		
 	}
+	form.reset();
 	return createObjectExperience(employer, title, location, dates, description);
 }
 
 function addExperience(){
 	experience.push(getFormExperience());
 	console.log(experience);
+
 }
