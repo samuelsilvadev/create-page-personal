@@ -109,5 +109,6 @@ function getFormExperience(){
 }
 
 function addExperience(){
-	console.log(getFormExperience());
+	experience.push(getFormExperience());
+	console.log(experience);
 }
