@@ -2,11 +2,13 @@
 	Onde ficara as regras para criar nova pagina
 */
 
+let experience = [];
+
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
 	getFormPerson();
 	getFormContact();
-	console.log(createObjectExperience("employer", "title", "location", "dates", "description"));
+	addExperience();
 });
 
 var biografiaNewUSer = {
@@ -71,13 +73,41 @@ function createObjectExperience(employer, title, location, dates, description){
 
 function getFormExperience(){
 	let form = document.getElementById("frm-experience");
-	let experience = [];
+	let employer;
+	let title;
+	let location;
+	let dates;
+	let description;
 	for (let i = 0; i < form.elements.length; i++){
 		let name = form.elements[i].name;
 		let value = form.elements[i].value;
+		switch (name){
+			case "employer":
+				employer = value;
+			break;
+			case "title":
+				title = value;
+			break;
+			case "location":
+				location = value;
+			break;
+			case "date-start":
+				dates += value;
+			break;
+			case "date-finish":
+				dates += " "+value;
+			break;
+			case "description":
+				description = value;
+			break;
+			default:
+				console.log("Erro ao ler propriedades do form -> frm-experience");
+			break;
+		}		
 	}
+	return createObjectExperience(employer, title, location, dates, description);
 }
 
 function addExperience(){
-
+	console.log(getFormExperience());
 }
