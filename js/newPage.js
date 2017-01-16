@@ -73,11 +73,11 @@ function createObjectExperience(employer, title, location, dates, description){
 
 function getFormExperience(){
 	let form = document.getElementById("frm-experience");
-	let employer;
-	let title;
-	let location;
-	let dates;
-	let description;
+	let employer = "";
+	let title = "";
+	let location = "";
+	let dates = "";
+	let description = "";
 	for (let i = 0; i < form.elements.length; i++){
 		let name = form.elements[i].name;
 		let value = form.elements[i].value;
