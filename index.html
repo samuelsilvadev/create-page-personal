@@ -41,85 +41,101 @@
             </ul>
         </div>
     </div>
-    <div id="main-page-personal">
+    <div id="main-page-personal" class="container">
         <button id="btn-main-2">Voltar</button>
         
-        <form id="frm-initial">
+        <div class="row">
+            <form id="frm-initial">
+                <div class="form-group">
+                    <div class="col-md-6"> 
+                        <label>Name</label>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Office</label>
+                        <input name="office" type="text" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <form id="frm-contacts">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Celular</label>
+                        <input name="mobile" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Email</label>
+                        <input name="email" type="email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Github</label>
+                        <input name="github" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Twitter</label>
+                        <input name="twitter" type="text" class="form-control">
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label>Eu moro em</label>
+                        <input name="location" type="text" class="form-control">
+                    </div>
+                </div>            
+            </form>
+        </div>
+        <div class="row">
+            <form id="frm-experience">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Empresa</label>
+                        <input name="employer" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label>Cargo</label>
+                        <input name="title" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                        <label>Localização</label>
+                        <input name="location" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <label>Data Inicio</label>
+                        <input name="date-start" type="date" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Localização</label>
+                        <input name="date-finish" type="date" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label>Descrição</label>
+                        <textarea name="description" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-1">
+                        <button id="btn-frm-experience" class="btn btn-default">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>                
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="row">
             <div class="form-group">
-                <div class="col-md-6"> 
-                    <label>Name</label>
-                    <input name="name" type="text" class="form-control">
+                <div class="col-md-2">
+                    <button id="btn-frm-contact-2" type="button" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-danger">Cancelar</button>
                 </div>
-                <div class="col-md-6">
-                    <label>Office</label>
-                    <input name="office" type="text" class="form-control">
-                </div>
-            </div>            
-        </form>
-
-        <form id="frm-contacts">
-            <div class="form-group">
-                <div class="col-md-6">
-                    <label>Celular</label>
-                    <input name="mobile" type="text" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <label>Email</label>
-                    <input name="email" type="email" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-6">
-                    <label>Github</label>
-                    <input name="github" type="text" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <label>Twitter</label>
-                    <input name="twitter" type="text" class="form-control">
-                </div>
-            </div>                
-            <div class="form-group">
-                <div class="col-md-12">
-                    <label>Eu moro em</label>
-                    <input name="location" type="text" class="form-control">
-                </div>
-            </div>            
-        </form>
-        <form id="frm-experience">
-            <div class="form-group">
-                <div class="col-md-4">
-                    <label>Empresa</label>
-                    <input name="employer" type="text" class="form-control">
-                </div>
-                <div class="col-md-4">
-                    <label>Cargo</label>
-                    <input name="title" type="text" class="form-control">
-                </div>
-                <div class="col-md-4">
-                    <label>Localização</label>
-                    <input name="location" type="text" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-6">
-                    <label>Data Inicio</label>
-                    <input name="date-start" type="date" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <label>Localização</label>
-                    <input name="date-finish" type="date" class="form-control">
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-12">
-                    <label>Descrição</label>
-                    <textarea name="description" class="form-control"></textarea>
-                </div>
-            </div>
-        </form>
-        <div class="form-group">
-            <div class="col-md-1">                 
-                <button id="btn-frm-contact-2" type="button" class="btn btn-default">Salvar</button>
             </div>
         </div>
     </div>   
