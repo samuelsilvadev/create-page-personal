@@ -16,13 +16,7 @@ var biografiaNewUSer = {
     role:"",
     idade:0,
     habilidades:[],
-    contacts:{
-        "mobile":"",
-        "email":"",
-        "github":"",
-        "twitter":"",
-        "location":""
-    },
+    contacts:{},
     Biografia:"",
     imagemDoPerfil:"images/fry.jpg"
 };
@@ -59,16 +53,6 @@ function getFormContact(){
 			biografiaNewUSer.contacts.location = value;
 		}
 	 }	 
-}
-
-function createObjectExperience(employer, title, location, dates, description){
-	return{
-		employer:employer,
-		title:title,
-		location:location,
-		dates:dates,
-		description:description
-	}
 }
 
 function getFormExperience(){
@@ -111,4 +95,24 @@ function getFormExperience(){
 
 function addExperience(){
 	experience.push(getFormExperience());
+}
+
+function createObjectExperience(employer, title, location, dates, description){
+	return{
+		employer:employer,
+		title:title,
+		location:location,
+		dates:dates,
+		description:description
+	}
+}
+
+function createObjectContacts(mobile, email, github, twitter, location){
+	return{
+		mobile:mobile,
+		email:email,
+		github:github,
+		twitter:twitter,
+		location:location
+	}
 }
