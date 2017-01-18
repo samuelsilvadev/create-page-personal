@@ -36,10 +36,10 @@ function getFormPerson(){
 }
 
 function getFormContact(){
-	for (let i = 0; i < document.getElementById("frm-contacts").elements.length; i++) {
-		
-		let name = document.getElementById("frm-contacts").elements[i].name;
-		let value = document.getElementById("frm-contacts").elements[i].value;
+	let form = document.getElementById("frm-contacts");
+	for (let i = 0; i < form.elements.length; i++) {
+		let name = form.elements[i].name;
+		let value = form.elements[i].value;
 		
 		if(name === "mobile"){
 			biografiaNewUSer.contacts.mobile = value;
