@@ -22,10 +22,10 @@ var biografiaNewUSer = {
 };
 
 function getFormPerson(){
-	for (let i = 0; i < document.getElementById("frm-initial").elements.length; i++) {
-		
-		let name = document.getElementById("frm-initial").elements[i].name;
-		let value = document.getElementById("frm-initial").elements[i].value;
+	let form = document.getElementById("frm-initial");
+	for (let i = 0; i < form.elements.length; i++) {
+		let name = form.elements[i].name;
+		let value = form.elements[i].value;
 		
 		if(name === "name"){
 			biografiaNewUSer.name = value;
@@ -37,6 +37,7 @@ function getFormPerson(){
 
 function getFormContact(){
 	let form = document.getElementById("frm-contacts");
+
 	for (let i = 0; i < form.elements.length; i++) {
 		let name = form.elements[i].name;
 		let value = form.elements[i].value;
