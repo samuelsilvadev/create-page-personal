@@ -7,9 +7,15 @@ let experience = [];
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
 	getFormPerson();
-	getFormContact();
-	addExperience();
+	getFormContact();	
 });
+
+document.getElementById("btn-frm-experience").addEventListener("click", function(e){
+	e.preventDefault();
+	addExperience();
+	addExperienceInTable();
+});
+
 
 var biografiaNewUSer = {
     name:"",
@@ -96,6 +102,11 @@ function getFormExperience(){
 
 function addExperience(){
 	experience.push(getFormExperience());
+}
+
+function addExperienceInTable(){
+	let table = document.querySelector("#tblExperience tbody");
+	table.innerHTML += "<tr><td>"+experience.employer+"</td><td>"+experience.title+"</td><td>"+experience.location+"</td></tr>";
 }
 
 function createObjectExperience(employer, title, location, dates, description){
