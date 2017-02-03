@@ -106,9 +106,8 @@ function addExperience(){
 
 function addExperienceInTable(){
 	let table = document.querySelector("#tblExperience tbody");
-	console.log(experience);
-	console.log(experience.length);
-	table.innerHTML += "<tr><td>"+experience[experience.length - 1].employer+"</td><td>"+experience[experience.length - 1].title+"</td><td>"+experience[experience.length - 1].location+"</td></tr>";
+	let indice = experience.length - 1;
+	table.innerHTML += "<tr><td>"+experience[indice].employer+"</td><td>"+experience[indice].title+"</td><td>"+experience[indice].location+"</td></tr>";
 }
 
 function createObjectExperience(employer, title, location, dates, description){
