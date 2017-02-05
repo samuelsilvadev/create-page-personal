@@ -3,6 +3,7 @@
 */
 
 let experience = [];
+let projectsDone = [];
 
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
