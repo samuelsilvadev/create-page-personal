@@ -18,7 +18,7 @@ document.getElementById("btn-frm-experience").addEventListener("click", function
 });
 
 
-var biografiaNewUSer = {
+var biographyNewUSer = {
     name:"",
     role:"",
     idade:0,
@@ -35,9 +35,9 @@ function getFormPerson(){
 		let value = form.elements[i].value;
 		
 		if(name === "name"){
-			biografiaNewUSer.name = value;
+			biographyNewUSer.name = value;
 		}else if(name === "office"){
-			biografiaNewUSer.role = value;
+			biographyNewUSer.role = value;
 		}
 	 }	 
 }
@@ -50,15 +50,15 @@ function getFormContact(){
 		let value = form.elements[i].value;
 		
 		if(name === "mobile"){
-			biografiaNewUSer.contacts.mobile = value;
+			biographyNewUSer.contacts.mobile = value;
 		}else if(name === "email"){
-			biografiaNewUSer.contacts.email = value;
+			biographyNewUSer.contacts.email = value;
 		}else if(name === "github"){
-			biografiaNewUSer.contacts.github = value;
+			biographyNewUSer.contacts.github = value;
 		}else if(name === "twitter"){
-			biografiaNewUSer.contacts.twitter = value;
+			biographyNewUSer.contacts.twitter = value;
 		}else if(name === "location"){
-			biografiaNewUSer.contacts.location = value;
+			biographyNewUSer.contacts.location = value;
 		}
 	 }	 
 }
@@ -131,3 +131,8 @@ function createObjectContacts(mobile, email, github, twitter, location){
 		location:location
 	}
 }
+
+(function createGenericObject(){
+	console.log(arguments);
+	console.log(arguments.length);
+})("description:samuel silva", "date:12-04-1996", "finish:15-06-2017", "location:Fortaleza");
