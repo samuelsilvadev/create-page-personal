@@ -132,7 +132,14 @@ function createObjectContacts(mobile, email, github, twitter, location){
 	}
 }
 
-(function createGenericObject(){
+function createGenericObject(){
+	let finalObject = {};
 	console.log(arguments);
-	console.log(arguments.length);
-})("description:samuel silva", "date:12-04-1996", "finish:15-06-2017", "location:Fortaleza");
+	for(let i = 0; i < arguments.length; i ++){
+		let object = arguments[i].split(":");
+		finalObject[object[0]] = object[1];
+	}
+	return finalObject;
+}
+
+console.log(createGenericObject("description:samuel silva", "date:12-04-1996", "finish:15-06-2017", "location:Fortaleza"));
