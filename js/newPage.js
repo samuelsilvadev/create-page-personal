@@ -134,7 +134,6 @@ function createObjectContacts(mobile, email, github, twitter, location){
 
 function createGenericObject(){
 	let finalObject = {};
-	console.log(arguments);
 	for(let i = 0; i < arguments.length; i ++){
 		let object = arguments[i].split(":");
 		finalObject[object[0]] = object[1];
@@ -142,4 +141,12 @@ function createGenericObject(){
 	return finalObject;
 }
 
+function getFormProjectsDone(){
+	let form = document.getElementById("frm-projects-done");
+	for(let element = 0; element < form.elements.length; element++){
+		console.log(form.elements[element].name);
+	}
+}
+
 console.log(createGenericObject("description:samuel silva", "date:12-04-1996", "finish:15-06-2017", "location:Fortaleza"));
+getFormProjectsDone();
