@@ -17,6 +17,11 @@ document.getElementById("btn-frm-experience").addEventListener("click", function
 	addExperienceInTable();
 });
 
+document.getElementById("btn-frm-projects-done").addEventListener("click", function(e){
+	e.preventDefault();
+	getFormProjectsDone();
+});
+
 
 var biographyNewUSer = {
     name:"",
@@ -143,10 +148,12 @@ function createGenericObject(){
 
 function getFormProjectsDone(){
 	let form = document.getElementById("frm-projects-done");
+	let campos = [];
+	console.log(form.elements[0]);
 	for(let element = 0; element < form.elements.length; element++){
-		console.log(form.elements[element].name);
+		campos.push(form.elements[element].name+":"+form.elements[element].value);
 	}
+	console.log(campos.join(","));
 }
-
 console.log(createGenericObject("description:samuel silva", "date:12-04-1996", "finish:15-06-2017", "location:Fortaleza"));
 getFormProjectsDone();
