@@ -19,7 +19,8 @@ document.getElementById("btn-frm-experience").addEventListener("click", function
 
 document.getElementById("btn-frm-projects-done").addEventListener("click", function(e){
 	e.preventDefault();
-	getFormProjectsDone();
+	//createGenericObject()
+	console.log(getFormProjectsDone());
 });
 
 
@@ -137,10 +138,19 @@ function createObjectContacts(mobile, email, github, twitter, location){
 	}
 }
 
-function createGenericObject(){
+/*function createGenericObject(){
 	let finalObject = {};
 	for(let i = 0; i < arguments.length; i ++){
 		let object = arguments[i].split(":");
+		finalObject[object[0]] = object[1];
+	}
+	return finalObject;
+}*/
+
+function createGenericObject(fields){
+	let finalObject = {};
+	for(let i = 0; i < fields.length; i ++){
+		let object = fields[i].split(":");
 		finalObject[object[0]] = object[1];
 	}
 	return finalObject;
@@ -154,8 +164,5 @@ function getFormProjectsDone(){
 			campos.push(form.elements[element].name+":"+form.elements[element].value);
 		}
 	}
-	/*console.log(campos.join(","));
-	console.log(createGenericObject(campos.join(",")));*/
-	return campos.join(",");
+	return campos;
 }
-
