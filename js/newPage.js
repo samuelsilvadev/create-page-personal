@@ -19,8 +19,7 @@ document.getElementById("btn-frm-experience").addEventListener("click", function
 
 document.getElementById("btn-frm-projects-done").addEventListener("click", function(e){
 	e.preventDefault();
-	//createGenericObject()
-	console.log(getFormProjectsDone());
+	console.log(createGenericObject(getFormProjectsDone()));	
 });
 
 
@@ -137,15 +136,6 @@ function createObjectContacts(mobile, email, github, twitter, location){
 		location:location
 	}
 }
-
-/*function createGenericObject(){
-	let finalObject = {};
-	for(let i = 0; i < arguments.length; i ++){
-		let object = arguments[i].split(":");
-		finalObject[object[0]] = object[1];
-	}
-	return finalObject;
-}*/
 
 function createGenericObject(fields){
 	let finalObject = {};
