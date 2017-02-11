@@ -8,18 +8,20 @@ let projectsDone = [];
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
 	getFormPerson();
-	getFormContact();	
+	getFormContact();
 });
 
 document.getElementById("btn-frm-experience").addEventListener("click", function(e){
 	e.preventDefault();
-	addExperience();
+	//addExperience();
+	experience.push(getForm("frm-experience"));
 	addExperienceInTable();
+	console.log(getForm("frm-experience"));
 });
 
 document.getElementById("btn-frm-projects-done").addEventListener("click", function(e){
 	e.preventDefault();
-	projectsDone.push(createGenericObject(getFormProjectsDone()));
+	projectsDone.push(createGenericObject(getForm("frm-projects-done")));
 	console.log(projectsDone);
 });
 
@@ -147,8 +149,8 @@ function createGenericObject(fields){
 	return finalObject;
 }
 
-function getFormProjectsDone(){
-	let form = document.getElementById("frm-projects-done");
+function getForm(idForm){
+	let form = document.getElementById(idForm);
 	let campos = [];
 	for(let element = 0; element < form.elements.length; element++){
 		if(form.elements[element].tagName == "INPUT" || form.elements[element].tagName == "TEXTAREA"){
