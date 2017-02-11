@@ -149,11 +149,13 @@ function createGenericObject(){
 function getFormProjectsDone(){
 	let form = document.getElementById("frm-projects-done");
 	let campos = [];
-	console.log(form.elements[0]);
 	for(let element = 0; element < form.elements.length; element++){
-		campos.push(form.elements[element].name+":"+form.elements[element].value);
+		if(form.elements[element].tagName == "INPUT" || form.elements[element].tagName == "TEXTAREA"){
+			campos.push(form.elements[element].name+":"+form.elements[element].value);
+		}
 	}
-	console.log(campos.join(","));
+	/*console.log(campos.join(","));
+	console.log(createGenericObject(campos.join(",")));*/
+	return campos.join(",");
 }
-console.log(createGenericObject("description:samuel silva", "date:12-04-1996", "finish:15-06-2017", "location:Fortaleza"));
-getFormProjectsDone();
+
