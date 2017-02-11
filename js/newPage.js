@@ -19,7 +19,8 @@ document.getElementById("btn-frm-experience").addEventListener("click", function
 
 document.getElementById("btn-frm-projects-done").addEventListener("click", function(e){
 	e.preventDefault();
-	console.log(createGenericObject(getFormProjectsDone()));	
+	projectsDone.push(createGenericObject(getFormProjectsDone()));
+	console.log(projectsDone);
 });
 
 
