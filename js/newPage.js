@@ -14,9 +14,8 @@ document.getElementById("btn-frm-contact-2").addEventListener("click",function(e
 document.getElementById("btn-frm-experience").addEventListener("click", function(e){
 	e.preventDefault();
 	//addExperience();
-	experience.push(getForm("frm-experience"));
-	addExperienceInTable();
-	console.log(getForm("frm-experience"));
+	experience.push(createGenericObject(getForm("frm-experience")));
+	addExperienceInTable();	
 });
 
 document.getElementById("btn-frm-projects-done").addEventListener("click", function(e){
