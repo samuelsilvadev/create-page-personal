@@ -4,10 +4,18 @@
 
 let experience = [];
 let projectsDone = [];
+let biographyNewUSer = {
+    idade:0,
+    habilidades:[],
+    contacts:{},
+    Biografia:"",
+    imagemDoPerfil:"images/fry.jpg"
+};
 
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
-	getFormPerson();
+	createGenericObject(getForm("frm-initial"));
+	//getFormPerson();
 	getFormContact();
 });
 
@@ -23,17 +31,6 @@ document.getElementById("btn-frm-projects-done").addEventListener("click", funct
 	projectsDone.push(createGenericObject(getForm("frm-projects-done")));
 	console.log(projectsDone);
 });
-
-
-var biographyNewUSer = {
-    name:"",
-    role:"",
-    idade:0,
-    habilidades:[],
-    contacts:{},
-    Biografia:"",
-    imagemDoPerfil:"images/fry.jpg"
-};
 
 function getFormPerson(){
 	let form = document.getElementById("frm-initial");
