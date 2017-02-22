@@ -14,14 +14,13 @@ let biographyNewUSer = {
 
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
-	createGenericObject(getForm("frm-initial"));
-	//getFormPerson();
+	console.log(createGenericObject(getForm("frm-initial")));
+	biographyNewUSer.contacts
 	getFormContact();
 });
 
 document.getElementById("btn-frm-experience").addEventListener("click", function(e){
 	e.preventDefault();
-	//addExperience();
 	experience.push(createGenericObject(getForm("frm-experience")));
 	addExperienceInTable();	
 });
@@ -31,20 +30,6 @@ document.getElementById("btn-frm-projects-done").addEventListener("click", funct
 	projectsDone.push(createGenericObject(getForm("frm-projects-done")));
 	console.log(projectsDone);
 });
-
-function getFormPerson(){
-	let form = document.getElementById("frm-initial");
-	for (let i = 0; i < form.elements.length; i++) {
-		let name = form.elements[i].name;
-		let value = form.elements[i].value;
-		
-		if(name === "name"){
-			biographyNewUSer.name = value;
-		}else if(name === "office"){
-			biographyNewUSer.role = value;
-		}
-	 }	 
-}
 
 function getFormContact(){
 	let form = document.getElementById("frm-contacts");
