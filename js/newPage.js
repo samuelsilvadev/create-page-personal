@@ -14,9 +14,12 @@ let biographyNewUSer = {
 
 document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
 	e.preventDefault();
+	//TODO adicionar no objeto biographyNewUSer
 	console.log(createGenericObject(getForm("frm-initial")));
-	biographyNewUSer.contacts
-	getFormContact();
+	console.log(createGenericObject(getForm("frm-contacts")));
+	Object.assign(biographyNewUSer.contacts, createGenericObject(getForm("frm-contacts")));
+	console.log(biographyNewUSer);
+	/*getFormContact();*/
 });
 
 document.getElementById("btn-frm-experience").addEventListener("click", function(e){
