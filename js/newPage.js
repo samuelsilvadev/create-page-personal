@@ -12,11 +12,12 @@ let biographyNewUSer = {
     imagemDoPerfil:"images/fry.jpg"
 };
 
-document.getElementById("btn-frm-contact-2").addEventListener("click",function(e){
+document.getElementById("btn-frm-biografia").addEventListener("click",function(e){
 	e.preventDefault();
 	Object.assign(biographyNewUSer, createGenericObject(getForm("frm-initial")));
 	Object.assign(biographyNewUSer.contacts, createGenericObject(getForm("frm-contacts")));
 	console.log(biographyNewUSer);
+	console.log(biografia);	
 });
 
 document.getElementById("btn-frm-experience").addEventListener("click", function(e){
