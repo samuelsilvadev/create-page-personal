@@ -16,8 +16,10 @@ document.getElementById("btn-frm-biografia").addEventListener("click",function(e
 	e.preventDefault();
 	Object.assign(biographyNewUSer, createGenericObject(getForm("frm-initial")));
 	Object.assign(biographyNewUSer.contacts, createGenericObject(getForm("frm-contacts")));
-	console.log(biographyNewUSer);
-	console.log(biografia);	
+	biografia = new Object();
+	biografia = biographyNewUSer;
+	console.log(biografia);
+	seeBiografia();
 });
 
 document.getElementById("btn-frm-experience").addEventListener("click", function(e){

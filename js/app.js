@@ -1,51 +1,46 @@
 var repete = "%data%";
 
-var header          = document.getElementById("header");
-var topContacts     = document.getElementById("topContacts");
-var footerContacts  = document.getElementById("footerContacts");
-var workExperience  = document.getElementById("workExperience");
-var projectsPerformed = document.getElementById("projects");
-var educationMe     = document.getElementById("education");
+var header              = document.getElementById("header");
+var topContacts         = document.getElementById("topContacts");
+var footerContacts      = document.getElementById("footerContacts");
+var workExperience      = document.getElementById("workExperience");
+var projectsPerformed   = document.getElementById("projects");
+var educationMe         = document.getElementById("education");
 
 //removendo para adicionar depois
 header.removeChild(topContacts);
 
-HTMLheaderName = HTMLheaderName.replace(repete, biografia.name);
-HTMLheaderRole = HTMLheaderRole.replace(repete, biografia.role);
-HTMLbioPic = HTMLbioPic.replace(repete,biografia.imagemDoPerfil);
+function seeBiografia(){
+    
+    header.innerHTML = "";
+    topContacts.innerHTML = "";
+    footerContacts.innerHTML = "";
 
-header.innerHTML += HTMLheaderName;
-header.innerHTML += HTMLheaderRole;
-//header.innerHTML += internationalizeButton;
-                
-HTMLmobile      = HTMLmobile.replace(repete, biografia.contacts.mobile);
-HTMLemail       = HTMLemail.replace(repete, biografia.contacts.email);
-HTMLgithub      = HTMLgithub.replace(repete, biografia.contacts.github);
-HTMLtwitter     = HTMLtwitter.replace(repete, biografia.contacts.twitter);
-HTMLlocation    = HTMLlocation.replace(repete, biografia.contacts.location);
+    HTMLheaderName = HTMLheaderName.replace(repete, biografia.name);
+    HTMLheaderRole = HTMLheaderRole.replace(repete, biografia.role);
+    HTMLbioPic = HTMLbioPic.replace(repete,biografia.imagemDoPerfil);
 
-topContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
-header.appendChild(topContacts);
-header.innerHTML += HTMLbioPic;
-header.innerHTML += HTMLskillsStart;
+    header.innerHTML += HTMLheaderName;
+    header.innerHTML += HTMLheaderRole;
+    //header.innerHTML += internationalizeButton;
+                    
+    HTMLmobile      = HTMLmobile.replace(repete, biografia.contacts.mobile);
+    HTMLemail       = HTMLemail.replace(repete, biografia.contacts.email);
+    HTMLgithub      = HTMLgithub.replace(repete, biografia.contacts.github);
+    HTMLtwitter     = HTMLtwitter.replace(repete, biografia.contacts.twitter);
+    HTMLlocation    = HTMLlocation.replace(repete, biografia.contacts.location);
 
-biografia.habilidades.forEach(function(key){
-    document.getElementById("skills").innerHTML += HTMLskills.replace(repete,key);
-});
-        
-footerContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
+    topContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
+    header.appendChild(topContacts);
+    header.innerHTML += HTMLbioPic;
+    header.innerHTML += HTMLskillsStart;
 
-if(work.work.length === 0) {
-    document.getElementById('workExperience').style.display = 'none';
-}else{
-    seeWork();                    
-};
-
-if(!projects.display){
-    document.getElementById('projects').style.display = 'none';
-}else{
-    seeProjects();
-} 
+    biografia.habilidades.forEach(function(key){
+        document.getElementById("skills").innerHTML += HTMLskills.replace(repete,key);
+    });
+            
+    footerContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
+}
 
 function seeWork(){
     work.work.forEach(function(work){
@@ -101,6 +96,20 @@ function seeEducationOnlineCourses(){
         let onlineURL = HTMLonlineURL.replace(repete, n.url);
         educationMe.innerHTML += '<div class="education-entry">'+ onlineTitle + onlineSchool + onlineDates + onlineURL + '</div><br>';
     });
+}
+
+seeBiografia();
+
+if(work.work.length === 0) {
+    document.getElementById('workExperience').style.display = 'none';
+}else{
+    seeWork();                    
+};
+
+if(!projects.display){
+    document.getElementById('projects').style.display = 'none';
+}else{
+    seeProjects();
 }
 
 seeEducationSchools();
