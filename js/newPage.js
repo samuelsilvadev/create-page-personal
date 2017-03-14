@@ -18,7 +18,7 @@ document.getElementById("btn-frm-biografia").addEventListener("click",function(e
 	Object.assign(biographyNewUSer.contacts, createGenericObject(getForm("frm-contacts")));
 	biografia = new Object();
 	biografia = biographyNewUSer;
-	console.log(biografia);
+	clearBiografia();
 	seeBiografia();
 });
 
