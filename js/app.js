@@ -3,6 +3,9 @@ var repete = "%data%";
 var header          = document.getElementById("header");
 var topContacts     = document.getElementById("topContacts");
 var footerContacts  = document.getElementById("footerContacts");
+var workExperience  = document.getElementById("workExperience");
+var projectsPerformed = document.getElementById("projects");
+var educationMe     = document.getElementById("education");
 
 //removendo para adicionar depois
 header.removeChild(topContacts);
@@ -32,15 +35,11 @@ biografia.habilidades.forEach(function(key){
         
 footerContacts.innerHTML += HTMLmobile + HTMLemail + HTMLgithub + HTMLtwitter + HTMLlocation;
 
-var workExperience = document.getElementById("workExperience");
-
 if(work.work.length === 0) {
     document.getElementById('workExperience').style.display = 'none';
 }else{
     seeWork();                    
 };
-
-var projectsPerformed = document.getElementById("projects");
 
 if(!projects.display){
     document.getElementById('projects').style.display = 'none';
@@ -78,7 +77,6 @@ function seeProjects(){
     });            
 }
 
-var educationMe = document.getElementById("education");
 function seeEducationSchools(){        
     education.schools.forEach(function(n){
         let schoolName = HTMLschoolName;
